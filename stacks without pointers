@@ -5,7 +5,7 @@ int top=-1,item,a[10];
 void push(){
     int b;
     if(top>=10)
-    {printf("Overflow");
+    {printf(" Stack Overflow");
     return;}
     printf("Enter no.:");
     scanf("%d",&b);
@@ -14,7 +14,7 @@ void push(){
 }
 void pop(){
     if(top==-1)
-    {printf("Underflow");
+    {printf("Stack Underflow");
     return;}
     printf("Deleted no.=%d\n",a[top--]);
 }
@@ -41,7 +41,7 @@ int main()
         case 3:display();
         break;
         case 4:exit(0);
-        default :printf("Invalid");
+        default :printf("Invalid choice");
         
     }}
     return 0;
