@@ -1,5 +1,5 @@
-#include<stdlib.h>
 #include<stdio.h>
+#include<stdlib.h>
 #include<conio.h>
 int top=-1,item,a[10];
 void push(){
