@@ -40,7 +40,7 @@ void insert()
 {
     int add_item;
     if (rear == MAX - 1)
-    printf("Queue Overflow \n");
+    printf("Queue is full \n");
     else
     {
         if (front == - 1)
@@ -54,12 +54,15 @@ void insert()
  
 void delete()
 {
-    if (front == - 1 & rear == -1)
+    if (front == - 1 && rear == -1)
     {
-        printf("Queue Underflow \n");
-        return ;
+        printf("Queue is empty\n");
     }
-    else
+    else if
+     (front==rear){
+         front=rear=-1;
+     }
+     else
     {
         printf("Element deleted from queue is : %d\n", queue_array[front]);
         front = front + 1;
@@ -69,7 +72,7 @@ void delete()
 void display()
 {
     int i;
-    if  (front == - 1 & rear == -1)
+    if (front == - 1 & rear == -1)
         printf("Queue is empty \n");
     else
     {
