@@ -19,6 +19,7 @@ void main()
     while (choice)
     {
         head  = (NODE *)malloc(sizeof(NODE));
+        
         printf("Enter the data item\n");
         scanf("%d", &head-> num);
         if (first != 0)
@@ -31,14 +32,13 @@ void main()
             first = temp = head;
         }
         fflush(stdin);
-        printf("Do you want to continue(Type 0 or 1)?\n");
+        printf("Do you want to continue :(Type 0 if No and 1 if Yes)\n");
         scanf("%d", &choice);
  
     }
     temp->ptr = 0;
-    /*  reset temp to the beginning */
     temp = first;
-    printf("\n status of the linked list is\n");
+    printf("\n Status of the linked list is\n");
     while (temp != 0)
     {
         printf("%d=>", temp->num);
@@ -46,5 +46,5 @@ void main()
         temp = temp -> ptr;
     }
     printf("NULL\n");
-    printf("No. of nodes in the list = %d\n", count);
+    printf("Number of nodes in the list = %d\n", count);
 }
